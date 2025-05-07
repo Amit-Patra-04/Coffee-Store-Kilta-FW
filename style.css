@@ -1,0 +1,22 @@
+ /* Base Styles */
+ :root {
+    --primary: #6F4E37;
+    --secondary: #C4A484;
+    --accent: #E6C229;
+    --light: #F5F5F5;
+    --dark: #2A1A0A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
