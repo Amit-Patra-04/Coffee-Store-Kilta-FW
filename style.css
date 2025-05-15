@@ -438,3 +438,126 @@ nav ul li a:hover::after {
     left: 100%;
 }
 
+/* Testimonials */
+.testimonials {
+    background-color: var(--primary);
+    color: white;
+    position: relative;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    padding: 8rem 5% 6rem;
+    margin-top: -5rem;
+}
+
+.testimonials .section-title {
+    color: white;
+}
+
+.testimonials .section-title::after {
+    background-color: var(--accent);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: translateY(30px);
+    opacity: 0;
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    backdrop-filter: blur(5px);
+}
+
+.testimonial:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.testimonial:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.testimonial:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.testimonial:hover .testimonial-text {
+    transform: scale(1.02);
+}
+
+.testimonial-text::before,
+.testimonial-text::after {
+    content: '"';
+    font-size: 2rem;
+    color: var(--accent);
+    opacity: 0.5;
+    position: absolute;
+    transition: all 0.4s ease;
+}
+
+.testimonial-text::before {
+    top: -15px;
+    left: -10px;
+}
+
+.testimonial-text::after {
+    bottom: -25px;
+    right: -10px;
+}
+
+.testimonial:hover .testimonial-text::before,
+.testimonial:hover .testimonial-text::after {
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-weight: bold;
+    color: var(--primary);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.testimonial:hover .author-avatar {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.author-name {
+    font-weight: bold;
+}
+
+.author-title {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
