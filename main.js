@@ -1,3 +1,26 @@
+// Interactive form inputs
+const formInputs = document.querySelectorAll('input, textarea');
+formInputs.forEach(input => {
+    input.addEventListener('focus', () => {
+        input.parentElement.style.transform = 'translateY(-5px)';
+        input.parentElement.style.transition = 'transform 0.3s ease';
+    });
+    
+    input.addEventListener('blur', () => {
+        input.parentElement.style.transform = 'translateY(0)';
+    });
+});
+
+// Parallax effect for hero section
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const heroSection = document.querySelector('.hero');
+    
+    if (heroSection) {
+        heroSection.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+    }
+});
+
 // Logo animation on hover
 const logo = document.querySelector('.logo');
 if (logo) {
