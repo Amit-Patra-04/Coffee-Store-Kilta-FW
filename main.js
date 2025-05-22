@@ -1,3 +1,39 @@
+// Steam animation for hero image
+const heroImage = document.getElementById('heroImage');
+if (heroImage) {
+    setInterval(() => {
+        createSteam(heroImage);
+    }, 1500);
+}
+
+function createSteam(element) {
+    const steam = document.createElement('div');
+    steam.className = 'steam';
+    
+    // Random position
+    const startX = 50 + (Math.random() * 40 - 20);
+    const startY = 50 + (Math.random() * 40 - 20);
+    
+    steam.style.left = `${startX}%`;
+    steam.style.top = `${startY}%`;
+    
+    // Random animation
+    const duration = 2 + Math.random() * 3;
+    const delay = Math.random() * 2;
+    const size = 5 + Math.random() * 10;
+    
+    steam.style.width = `${size}px`;
+    steam.style.height = `${size * 6}px`;
+    steam.style.animation = `steam ${duration}s ease-out ${delay}s forwards`;
+    
+    element.appendChild(steam);
+    
+    // Remove steam after animation completes
+    setTimeout(() => {
+        steam.remove();
+    }, (duration + delay) * 1000);
+}
+
 // Interactive form inputs
 const formInputs = document.querySelectorAll('input, textarea');
 formInputs.forEach(input => {
