@@ -1,3 +1,23 @@
+// Form submission
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Simple form validation
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        if (name && email && message) {
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+        } else {
+            alert('Please fill in all required fields.');
+        }
+    });
+}
+
 // Enhanced Cursor Follower
 const cursorFollower = document.querySelector('.cursor-follower');
 document.addEventListener('mousemove', (e) => {
