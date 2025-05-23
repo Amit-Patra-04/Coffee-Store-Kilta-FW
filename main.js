@@ -1,3 +1,16 @@
+// Ripple effect on click
+document.addEventListener('click', (e) => {
+    const ripple = document.createElement('div');
+    ripple.className = 'ripple-effect';
+    ripple.style.left = e.clientX + 'px';
+    ripple.style.top = e.clientY + 'px';
+    document.body.appendChild(ripple);
+    
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+});
+
 // Steam animation for hero image
 const heroImage = document.getElementById('heroImage');
 if (heroImage) {
