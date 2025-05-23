@@ -1,3 +1,21 @@
+// Enhanced Cursor Follower
+const cursorFollower = document.querySelector('.cursor-follower');
+document.addEventListener('mousemove', (e) => {
+    cursorFollower.style.left = e.clientX + 'px';
+    cursorFollower.style.top = e.clientY + 'px';
+});
+
+// Activate cursor follower on hover
+document.querySelectorAll('a, button, .hover-scale').forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        cursorFollower.classList.add('active');
+    });
+    
+    element.addEventListener('mouseleave', () => {
+        cursorFollower.classList.remove('active');
+    });
+});
+
 // Ripple effect on click
 document.addEventListener('click', (e) => {
     const ripple = document.createElement('div');
