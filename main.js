@@ -1,3 +1,22 @@
+// Animate elements when they come into view
+const animateOnScroll = () => {
+    const elements = document.querySelectorAll('.section-title, .menu-item, .testimonial, .about-text p, .contact-form');
+    const windowHeight = window.innerHeight;
+    
+    elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementPosition < windowHeight - elementVisible) {
+            element.style.animationPlayState = 'running';
+        }
+    });
+};
+
+// Run on load and scroll
+window.addEventListener('load', animateOnScroll);
+window.addEventListener('scroll', animateOnScroll);
+
 // Form submission
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
