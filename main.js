@@ -1,3 +1,76 @@
+// Mobile Menu Toggle
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+    menuToggle.textContent = navMenu.classList.contains('show') ? '✕' : '☰';
+});
+
+// Header Scroll Effect
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// Smooth Scrolling for Navigation Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+        });
+        
+        // Close mobile menu if open
+        navMenu.classList.remove('show');
+        menuToggle.textContent = '☰';
+    });
+});
+
+// // Create Floating Coffee Beans
+// function createCoffeeBean() {
+//     const bean = document.createElement('div');
+//     bean.className = 'coffee-bean';
+    
+//     // Random position and animation
+//     const startX = Math.random() * 100;
+//     const duration = 10 + Math.random() * 20;
+//     const delay = Math.random() * 5;
+//     const size = 20 + Math.random() * 30;
+//     const rotation = Math.random() * 360;
+    
+//     bean.style.left = `${startX}vw`;
+//     bean.style.width = `${size}px`;
+//     bean.style.height = `${size}px`;
+//     bean.style.animationDuration = `${duration}s`;
+//     bean.style.animationDelay = `${delay}s`;
+//     bean.style.transform = `rotate(${rotation}deg)`;
+    
+//     document.body.appendChild(bean);
+    
+//     // Remove bean after animation completes
+//     setTimeout(() => {
+//         bean.remove();
+//     }, duration * 1000);
+// }
+
+// // Create initial beans
+// for (let i = 0; i < 15; i++) {
+//     createCoffeeBean();
+// }
+
+// // Continue creating beans periodically
+// setInterval(createCoffeeBean, 2000);
+
 // Animate elements when they come into view
 const animateOnScroll = () => {
     const elements = document.querySelectorAll('.section-title, .menu-item, .testimonial, .about-text p, .contact-form');
