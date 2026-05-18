@@ -770,6 +770,11 @@ footer {
     color: rgba(255, 255, 255, 0.7);
 }
 
+.txt{
+    text-decoration: none;
+    color: white;
+}
+
 .txt i{
     color: red;
 }
