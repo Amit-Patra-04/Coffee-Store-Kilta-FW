@@ -4,13 +4,13 @@ A beautiful, responsive, single-page website for a premium coffee brand, featuri
 
 ## 📸 Website Overview
 
-> ![Desktop View](<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/c84ac7a9-d716-4af3-8f44-41ae937d0416" />)
+> ![Desktop View] (<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/84c7b041-9c0f-48e2-a902-0a4cea36c4ab" />).
 > *Desktop View*
 >
-> ![Tablet View](<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ed6fb50b-523f-4d71-9480-1366aa6c85f4" />)
+> ![Tablet View] (<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/60905b18-ebe5-4091-b273-688609b51ee3" />).
 > *Tablet View*
 >
-> ![Mobile View](<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/d7f09e96-b5de-4ec8-8b0f-9f1cfee4c00f" />)
+> ![Mobile View] (<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/f5d9ccd0-5cd6-45f3-b335-ce30c9aec5fb" />).
 > *Mobile View*
 
 
